@@ -355,6 +355,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Code/Cam_Move.cs"
 "Assets/Code/Player.cs"
+"Assets/Code/PlayerTracker.cs"
 "Assets/Code/Selecting_Room.cs"
 -langversion:9.0
 

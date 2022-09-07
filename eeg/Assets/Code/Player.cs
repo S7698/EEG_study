@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    /**
+    public float speed = 2;
+    private Vector3 motion;
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        motion = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        rb.velocity = motion * speed;
+    }
+    **/
+
 
     private CharacterController controller;
     private Vector3 playerVelocity;
@@ -42,6 +59,7 @@ public class Player : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
+    
 
     /**
     [SerializeField] // for access in unity engine
@@ -73,5 +91,5 @@ public class Player : MonoBehaviour
         transform.Translate(Vector3.right * Time.deltaTime * _speed * horizontalInput);
     }
     **/
-    
+
 }
