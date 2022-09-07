@@ -24,7 +24,7 @@ public class Cam_Move : MonoBehaviour
 
     // Update is called once per frame
     // runs after the player update (second loop) to make it smooth
-    /**
+    
     void LateUpdate()
     {
         // include null check (if dead etc.)
@@ -34,8 +34,12 @@ public class Cam_Move : MonoBehaviour
             Vector3 newPosition = target.transform.position + offset;
             transform.position = newPosition;
         }
-    
+
+        if (Input.GetKey(KeyCode.))
+        {
+            Application.Quit();
+        }
 
     }
-    **/
+    
 }
