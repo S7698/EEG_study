@@ -7,7 +7,9 @@ using Random = UnityEngine.Random;
 
 public class TaskManager : MonoBehaviour
 {
-    private int[] sceneArray = { 0, 1, 2, 3 };
+    // Manage the scene sequence
+
+    private int[] sceneArray = { 0, 1, 2, 3 }; // Scene indices from build setting
     private static int sceneInx = 0;
     private int scenePicked;
 
@@ -18,6 +20,7 @@ public class TaskManager : MonoBehaviour
 
     void Start()
     {
+        // Random assignment of scene/experimental condition
         if (sceneInx == 0)
         {
             RandomPick();
@@ -40,10 +43,10 @@ public class TaskManager : MonoBehaviour
 
     void Update()
     {
-        // Set the time to be spent in a virtual room
+        // Set the task duration in the virtual room
         timer += Time.deltaTime;
 
-        if (timer > 10f && sceneInx != (sceneArray.Length - 1) ) // to 5 min
+        if (timer > 300f && sceneInx != (sceneArray.Length - 1) ) // currently 5 min
         {
             questionnaire.SetActive(true);
         }

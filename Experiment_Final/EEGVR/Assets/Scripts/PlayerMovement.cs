@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Control player viewpoint/movement direction with the mouse
+
     [Header("Movement")]
     public float moveSpeed = 6f;
     public float movementMultiplier = 10f;

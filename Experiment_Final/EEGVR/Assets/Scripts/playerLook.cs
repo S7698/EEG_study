@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerLook : MonoBehaviour
 {
+    //Control player movement with WASD keys
+
     private float sensX = 80f;
     private float sensY = 30f;
 

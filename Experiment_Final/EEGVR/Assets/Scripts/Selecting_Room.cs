@@ -8,48 +8,28 @@ using Random = UnityEngine.Random;
 
 public class Selecting_Room : MonoBehaviour
 {
+    //Alternative code for between-subject design (currently not used)
+
     public int[] sceneArray = {0,1,2,3};
     public static int sceneInx = 0;
 
     private float timer = 0.0f;
     [SerializeField] GameObject questionnaire;
 
-    /*
-    // SWITCH TO ROOMS 
-    private void Update()
-    {
-
-        if (Input.GetKeyDown("a"))
-        {
-            SceneManager.LoadScene(1);
-        }
-        if (Input.GetKeyDown("b"))
-        {
-            SceneManager.LoadScene(2);
-        }
-        if (Input.GetKeyDown("c"))
-        {
-            SceneManager.LoadScene(3);
-        }
-    }
-    */
 
     void Start()
     {
         if (sceneInx == 0)
         {
             Shuffle();
-
         }
-        
-
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if(timer > 10f) //
+        if(timer > 180f) // task duration in each room
         {
             questionnaire.SetActive(true);
         }
